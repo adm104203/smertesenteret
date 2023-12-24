@@ -72,6 +72,14 @@ header {
   justify-content: space-between;
 }
 
+.nav__logo img {
+  height: 80px;
+  /* Adjust this value as needed */
+  width: auto;
+  /* Keeps the aspect ratio intact */
+}
+
+
 .nav__logo {
   font-size: 1.5rem;
   font-weight: 600;
@@ -305,6 +313,35 @@ header {
 .why__grid p {
   color: var(--text-light);
 }
+
+
+.faq__question {
+  background-color: #f5f5f5;
+  color: #333;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  transition: 0.4s;
+}
+
+.faq__answer {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.faq__answer p {
+  margin: 10px 0;
+}
+
+
+
 
 .doctors__header {
   display: flex;

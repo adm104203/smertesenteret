@@ -14,7 +14,9 @@
   <header>
     <!-- Navigation bar -->
     <nav class="section__container nav__container">
-      <div class="nav__logo">Smerte<span>Senteret</span></div>
+      <div class="nav__logo">
+        <img src="assets/ss.png" alt="SmerteSenteret Logo">
+      </div>
       <ul class="nav__links">
         <li class="link"><a href="#">Hjem</a></li>
         <li class="link"><a href="#">Om oss</a></li>
@@ -149,6 +151,103 @@
       <img src="assets/about.jpg" alt="about" />
     </div>
   </section>
+
+
+  <section class="section__container faq__container" id="faq">
+    <div class="faq__header">
+      <h2 class="section__header">FAQ | Ofte stilte spørsmål</h2>
+    </div>
+    <div class="faq__content">
+      <div class="faq__item">
+        <button class="faq__question">Hvor mange behandlinger trenger jeg? </button>
+        <div class="faq__answer">
+          <p>Antall behandlinger avhenger av tilstandens omfang. Noen pasienter kan ha effekt av kun én behandling, mens
+            andre trenger flere.
+            Hvis man ikke merker noen effekt etter to behandlinger, er det mindre sannsynlig at flere behandlinger vil
+            gi effekt.
+            Opp mot 1-3 behandlinger med 2-3 ukers intervall kan være riktig hos noen pasienter.</p>
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question">Hvor vondt er det etter behandlingen? Kan jeg gå på jobb? Kan jeg trene? </button>
+        <div class="faq__answer">
+          <p>En del pasienter opplever litt ømhet/murring i aktuelle behandlingssted 1-2 dager etter behandling.
+            Det er helt ufarlig. Man kan leve som normalt, men anbefaler at man ikke driver med hard trening de første
+            72 timene</p>
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question">Hvor lenge varer bedrings effekten? Må jeg ha flere behandlinger
+          etterhvert?</button>
+        <div class="faq__answer">
+          <p>Effekten av blodplasma behandling (PRP) kan vare fra noen måneder til over et år. I noen tilfeller enda
+            lengre.
+            I en studie på kneartrose behandlet med PRP, hadde pasientene fortsatt effekt etter 3 år.
+            Ingen av behandlingene er derfor varige, og må ofte gjentas etter en tid.</p>
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question">Når kan man forventer å føle effekten / bedring etter behandling? Og hvor mye
+          bedring?</button>
+        <div class="faq__answer">
+          <p>Noen pasienter kjenner effekt allerede i løpet av den første uken. Hos noen kommer effekten senere, og
+            innen ca 4 uker vil man vanligvis kjenne effekt på smertene. Graden av effekt er veldig individuelt, og
+            avhengig av tid og antall behandlinger. Det kan ta opptil 3 måneder før man oppnår full effekt i muskler og
+            sener. </p>
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question">Kan jeg få PRP behandling etter jeg har hatt kortison injeksjoner? Hvor lenge må
+          jeg vente før jeg kan behandles?</button>
+        <div class="faq__answer">
+          <p>Kortison injeksjon nedsetter immunresponsen i flere uker, så vi anbefaler at det går minst 8 uker før man
+            får blodplasma behandling samme sted. </p>
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question">Er det noen bivirkninger av PRP?</button>
+        <div class="faq__answer">
+          <p>Bivirkningene av PRP injeksjoner er svært begrenset da pasientene bruker sitt eget blod. Vanlige
+            bivirkninger som rødhet, smerter på injeksjonssted og infeksjoner kan forekomme. </p>
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question">Hvorfor gis ikke behandlingen på norske sykehus?</button>
+        <div class="faq__answer">
+          <p>Studier viser at behandlingen kan redusere smerter og bedre funksjon ved å virke betennelsesdempende. Det
+            finnes flere studier som viser at behandling med PRP kan utsette behov for operasjon og redusere smerter i
+            påvente av operasjon. Behandlingsmetoden er nå også vurdert innført i amerikanske retningslinjer for
+            artrose. Statens helsetilsyn har uttalt at behandlingen har lav risiko for komplikasjoner og at det er en
+            mulighet for positiv effekt for pasientene i form av smertelindring.
+
+            Effekten av behandlingen kan variere fra person til person etter hva som behandles og avhengig av grad av
+            skade/artrose og pasientens smerter. Vi ønsker å opplyse om at selv om behandlingen er blitt tilbudt i flere
+            år er den fortsatt kategorisert som utprøvende, men dokumentert som trygg.
+
+            Det finnes også sykehus som tilbyr PRP behandling. Smertepoliklinikken på Ahus tilbyr PRP for noen
+            pasientgrupper hyperlink(https://www.ahus.no/behandlinger/platerikt-plasma/)</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- JavaScript for FAQ Section -->
+  <script>
+    document.querySelectorAll('.faq__question').forEach(button => {
+      button.addEventListener('click', () => {
+        const answer = button.nextElementSibling;
+
+        button.classList.toggle('active');
+        if (button.classList.contains('active')) {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        } else {
+          answer.style.maxHeight = 0;
+        }
+      });
+    });
+  </script>
+
 
   <!-- Doctors section -->
   <section class="section__container doctors__container">
