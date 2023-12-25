@@ -72,11 +72,29 @@ header {
   justify-content: space-between;
 }
 
-.nav__logo img {
-  height: 80px;
-  /* Adjust this value as needed */
+.nav__logooo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  /* Set a specific height for the logo container */
+}
+
+.nav__logooo img {
+  max-height: 450%;
+  /* Ensure the image doesn't exceed the container's height */
   width: auto;
-  /* Keeps the aspect ratio intact */
+  /* Maintain aspect ratio */
+}
+
+.nav__logooov2 img {
+  height: 400px;
+  /* Adjust the height as needed */
+  width: auto;
+  /* Maintains the aspect ratio */
+  margin-top: -190px;
+  /* Adjust this value as needed */
+  margin-bottom: -130px;
 }
 
 
@@ -89,6 +107,31 @@ header {
 .nav__logo span {
   color: var(--secondary-color);
 }
+
+/* Responsive adjustments for tablets */
+@media (max-width: 768px) {
+  .nav__logooov2 img {
+    height: 200px;
+    /* Smaller height for tablets */
+    margin-top: -95px;
+    /* Adjusted top margin */
+    margin-bottom: -65px;
+    /* Adjusted bottom margin */
+  }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 480px) {
+  .nav__logooov2 img {
+    height: 100px;
+    /* Smaller height for mobile devices */
+    margin-top: -50px;
+    /* Adjusted top margin */
+    margin-bottom: -30px;
+    /* Adjusted bottom margin */
+  }
+}
+
 
 .nav__links {
   list-style: none;
@@ -313,6 +356,7 @@ header {
 .why__grid p {
   color: var(--text-light);
 }
+
 
 
 .faq__question {
