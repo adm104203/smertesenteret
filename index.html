@@ -10,11 +10,19 @@
 </head>
 
 <body>
+  <!-- Link to the JavaScript file -->
+  <script src="scripts.js"></script>
   <!-- Header section -->
   <header>
     <!-- Navigation bar -->
     <nav class="section__container nav__container">
-      <ul class="nav__links">
+      <!-- Hamburger Icon for Mobile -->
+      <div class="hamburger" onclick="toggleNavbar()">
+        <i class="ri-menu-line"></i> <!-- Replace with your icon -->
+      </div>
+
+      <!-- Navbar Links -->
+      <ul class="nav__links" id="nav-links">
         <li class="link"><a href="#">Hjem</a></li>
         <li class="link"><a href="#">Om oss</a></li>
         <li class="link"><a href="#">Tjenester</a></li>
@@ -23,6 +31,7 @@
       </ul>
       <button class="btn">Bestill Time</button>
     </nav>
+
     <!-- Header content -->
     <div class="section__container header__container">
       <div class="header__content">
@@ -46,7 +55,7 @@
           <input type="text" placeholder="Etternavn" />
           <input type="text" placeholder="Adresse" />
           <input type="text" placeholder="Telefon nr." />
-          <button class="btn form__btn">Book Appointment</button>
+          <button class="btn form__btn">Send</button>
         </form>
 
       </div>
@@ -124,6 +133,73 @@
     </div>
     </div>
   </section>
+
+  <!-- Prices section -->
+  <section class="section__container prices__container">
+    <div class="prices__header">
+      <h2 class="section__header">Våre Behandlingspriser</h2>
+      <p>Alle injeksjoner i ledd og muskler utføres ultralydveiledet.</p>
+    </div>
+    <div class="prices__cards">
+      <!-- Price Card for each treatment -->
+      <!-- PRP + Hyaluronsyure Treatments -->
+      <div class="price__card">
+        <div class="card__header">
+          <h3 class="price__title">PRP + Hyaluronsyure i Kne</h3>
+          <div class="price__tag">3900,-</div>
+        </div>
+        <p class="card__info">Effektiv behandling for kneleddsmerter med PRP og hyaluronsyre.</p>
+      </div>
+      <div class="price__card">
+        <div class="card__header">
+          <h3 class="price__title">PRP + Hyaluronsyure i Skulder</h3>
+          <div class="price__tag">3900,-</div>
+        </div>
+        <p class="card__info">Behandling for skuldersmerter med kombinasjon av PRP og hyaluronsyre.</p>
+      </div>
+      <!-- ... more PRP + Hyaluronsyure treatments ... -->
+
+      <!-- PRP Treatments -->
+      <div class="price__card">
+        <div class="card__header">
+          <h3 class="price__title">PRP i Ledd</h3>
+          <div class="price__tag">2900,-</div>
+        </div>
+        <p class="card__info">PRP-behandling for ledd for å fremme helbredelse og smertelindring.</p>
+      </div>
+      <!-- ... more PRP treatments ... -->
+
+      <!-- Other Treatments -->
+      <div class="price__card">
+        <div class="card__header">
+          <h3 class="price__title">Hyaluronsyre Ledd</h3>
+          <div class="price__tag">1900,-</div>
+        </div>
+        <p class="card__info">Hyaluronsyreinjeksjoner for ledd for å forbedre mobilitet og redusere smerte.</p>
+      </div>
+      <div class="price__card">
+        <div class="card__header">
+          <h3 class="price__title">Ultralydveiledet Leddinjeksjon med Kortison</h3>
+          <div class="price__tag">1900,-</div>
+        </div>
+        <p class="card__info">Kortisoninjeksjoner for ledd, veiledet av ultralyd for presis behandling.</p>
+      </div>
+      <!-- ... more other treatments ... -->
+
+      <!-- Add more cards for each treatment -->
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
   <!-- About us section -->
   <section class="section__container about__container">
     <div class="about__content">
@@ -236,21 +312,6 @@
     </div>
   </section>
 
-  <!-- JavaScript for FAQ Section -->
-  <script>
-    document.querySelectorAll('.faq__question').forEach(button => {
-      button.addEventListener('click', () => {
-        const answer = button.nextElementSibling;
-
-        button.classList.toggle('active');
-        if (button.classList.contains('active')) {
-          answer.style.maxHeight = answer.scrollHeight + 'px';
-        } else {
-          answer.style.maxHeight = 0;
-        }
-      });
-    });
-  </script>
 
 
   <!-- Doctors section -->
